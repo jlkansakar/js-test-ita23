@@ -35,7 +35,7 @@ function isWithinRange(n, min, max) {
     return n > min && n < max;
 }
 
-console.log(isWithinRange(3,2,6));
+console.log(isWithinRange(3,1,6));
 
 /**
  * This function checks if a string contains the string "ba"
