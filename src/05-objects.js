@@ -7,10 +7,14 @@
  * const person = createPersonObject();
  * // person might be { name: 'John Doe', age: 30, city: 'New York' }
  */
-function createPersonObject() {
+function CreatePersonObject(name, age, city) {
+    this.name = name;
+    this.age = age;
+    this.city = city;
     
 }
-
+const person = new CreatePersonObject("John Doe", 30, "New York")
+console.log(person);
 
 /**
  * This function returns the name of the given person object.
@@ -23,9 +27,10 @@ function createPersonObject() {
  * // personName will be 'John Doe'
  */
 function getPersonName(person) {
-
+    return person.name
 }
-
+const personName = getPersonName({name: 'John Doe', age: 30, city: 'New York' });
+console.log(personName);
 
 /**
  * This function finds a person from an array of persons based on their name.
@@ -40,20 +45,36 @@ function getPersonName(person) {
  *
  */
 function findPersonByName(persons, name) {
-
+    let realName = ""
+    for (let i = 0; i <= persons.length; i++) {
+        if (persons[i].name === name) {
+            realName = persons[i].name
+        }
+    }
+    return realName
 }
-
+const john = findPersonByName([{name: "John doe", age: 30}, {name: "Jane Doe", age: 30}], "John Doe");
+console.log(john);
+// persons[i] virker ikke?!?!
 
 /**
  * This function calculates the total age of all persons in an array.
  *
  * @param {Object[]} persons - Array of person objects.
- * @returns {number} - The total age of all persons.
+ * @returns {Object} - The total age of all persons.
  *
  * Usage:
  * const totalAge = getTotalAge([{ name: 'John Doe', age: 30 }, { name: 'Jane Doe', age: 25 }]);
  * // totalAge will be 55
  */
+
 function getTotalAge(persons) {
+    let aggregateAge = 0
+    for (let i = 0; i <persons.length ; i++) {
+        aggregateAge = aggregateAge + persons[i].age
+    }
+    return aggregateAge;
 
 }
+
+console.log(getTotalAge([{name: "John Doe", age: 30}, {name: "jane Doe", age: 25}]));
