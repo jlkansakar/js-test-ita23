@@ -15,7 +15,7 @@ function CreatePersonObject(name, age, city) {
 }
 const person = new CreatePersonObject("John Doe", 30, "New York")
 console.log(person);
-
+// Giver fuld rød i checkliste, men jeg har et objekt med alle de givne object-ting - samme problem som i onsdags
 /**
  * This function returns the name of the given person object.
  *
@@ -44,18 +44,19 @@ console.log(personName);
  * console.log(john); // Outputs { name: 'John Doe', age: 30 }
  *
  */
+
 function findPersonByName(persons, name) {
-    let realName = ""
+    let realName = "";
     for (let i = 0; i <= persons.length; i++) {
         if (persons[i].name === name) {
-            realName = persons[i].name
+            realName = name
         }
     }
     return realName
 }
 const john = findPersonByName([{name: "John doe", age: 30}, {name: "Jane Doe", age: 30}], "John Doe");
 console.log(john);
-// persons[i] virker ikke?!?!
+// persons[i] virker ikke - Kode stopper her hvis man ikke commenter koden, så getTotalAge under kører ikke hvis man ik gør det lol
 
 /**
  * This function calculates the total age of all persons in an array.

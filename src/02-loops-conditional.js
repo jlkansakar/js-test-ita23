@@ -36,7 +36,7 @@ function isWithinRange(n, min, max) {
 }
 
 console.log(isWithinRange(3,1,6));
-
+// Ved ikke hvorfor den ikke virker med "true if within range" - Den giver mig det rigtige svar når jeg logger?
 /**
  * This function checks if a string contains the string "ba"
  *

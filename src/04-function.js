@@ -18,7 +18,7 @@ function generateMessage(name, age) {
 }
 const message = generateMessage("Jack", 25);
 console.log(message)
-
+// Ved ikke lige hvorfor den ikke giver god for "non-standard name" men oh well
 /**
  * This function capitalizes the first letter of every word in a sentence.
  *
